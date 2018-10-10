@@ -1,7 +1,12 @@
-# 使用列表实现栈, 支持扩容
+""""
+使用列表实现栈
+author: 云水心
+@ 2018.10
+"""
 
 
 class Stack:
+
     def __init__(self, capacity: int):
         self._count = 0
         self._data = [None] * capacity
@@ -27,7 +32,6 @@ class Stack:
             self._count += 1
 
     def pop(self):
-		# if self._count == 0:
         if not self._data:  # 空, 无元素
             return False
         else:
@@ -39,7 +43,35 @@ class Stack:
         return str(self._data[:self._count])
 
 
+# 检查括号是否匹配
+def check_brackets(s):
+    left, right = ['(', '[', '{'], [')', ']', '}']
+    n = len(s)
+    if n % 2:
+        return False
+    else:
+        n_pairs = int(n / 2)
+        stack = Stack(10)
+
+        for i in range(n_pairs):
+            if s[i] in left:
+                stack.push(s[i])
+            else:
+                return False
+        for j in range(n_pairs):
+            if s[n_pairs + j] in right:
+                s_t = stack.pop()
+                if left.index(s_t) == right.index(s[n_pairs + j]):
+                    continue
+                else:
+                    return False
+            else:
+                return False
+        return True
+
+
 if __name__ == "__main__":
+
     s = Stack(3)
     for i in range(3):
         s.push(i)
@@ -53,3 +85,6 @@ if __name__ == "__main__":
     print(s)  # [0, 1, 2]
     s.push('push after pop')
     print(s)  # [0, 1, 2, 'push after pop']
+
+    print(check_brackets('([{}])'))
+    print(check_brackets('[({)]}'))
