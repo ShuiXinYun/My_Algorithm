@@ -1,4 +1,4 @@
-# 使用列表实现栈
+# 使用列表实现栈, 支持扩容
 
 
 class Stack:
@@ -27,6 +27,7 @@ class Stack:
             self._count += 1
 
     def pop(self):
+		# if self._count == 0:
         if not self._data:  # 空, 无元素
             return False
         else:
