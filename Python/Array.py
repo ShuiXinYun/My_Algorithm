@@ -1,4 +1,8 @@
-# 使用列表实现数组的insert, delete, insert_to_head, insert_to_tail, find, print_all, 支持负数下标访问
+"""
+使用列表实现数组的insert, delete, insert_to_head, insert_to_tail, find, print_all, 支持负数下标访问
+author: 云水心
+@ 2018.10
+"""
 
 
 class MyArray:
