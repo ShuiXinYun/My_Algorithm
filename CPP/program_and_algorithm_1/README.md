@@ -60,6 +60,7 @@ pass
 + STL的binary_search, lower_bound, upper_bound 
 + `bool binary_search(ArrayName, ArrayName + N, value); `
 + `bool binary_search(ArrayName, ArrayName + N, value, SortStructName());`
-  `T * lower_bound(ArrayName, ArrayName + N, value); `
++ `T * lower_bound(ArrayName, ArrayName + N, value); `
 + `T * lower_bound(ArrayName, ArrayName + N, value, SortStructName)`
 + lower_bound(): 查找大于等于value, 下标最小的元素, 找不到则返回N处指针; upper_bound(): 查找大于value, 下标最小的元素, 找不到则返回N处指针
+
