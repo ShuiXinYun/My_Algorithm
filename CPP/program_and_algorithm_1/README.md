@@ -1,6 +1,6 @@
 # 北大《程序设计与算法》（一）C语言程序设计相关代码
 
-> [MOOC](https://www.icourse163.org/course/PKU-1001553023)
+> 课程地址：[MOOC](https://www.icourse163.org/course/PKU-1001553023)
 
 ## week 1
 
@@ -12,9 +12,13 @@
 + %d, %c, %f, %lf, %lld, %x, %nd, %0nd, %.nf, %u
 + void 指针 
 
-## week 3 & week 4
+## week 3
 
 pass
+
+## week 4
+
+使用freopen重新定向文件
 
 ## week 5
 
