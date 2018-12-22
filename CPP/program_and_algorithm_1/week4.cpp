@@ -23,5 +23,6 @@ int main()
 	}
 	printf("\nthe max: %d", mx);
 	fclose(stdin);
+	fclose(stdout); 
 	return 0;
 }
