@@ -43,6 +43,6 @@ int main()
 	test_const();
 	char * s1 = new char[MAX_SIZE];
 //	s1 = "hello world again!"; //此句导致报错, 不能delete, s1指向改变了 
-	delete [] s1;
+	delete [] s1; //使用new必须对应使用delete[], delete 
 	return 0;
 }

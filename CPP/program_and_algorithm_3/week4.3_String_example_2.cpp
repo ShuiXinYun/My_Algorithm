@@ -1,9 +1,7 @@
 /* 
 北大程序设计与算法（三）：c++面向对象程序设计 
 Week4
-运算符重载
-编写String类 
-重载 = 实现字符串对String对象的赋值
+改善4.2程序, 编写同类对象的赋值重载函数
 */
 #include<cstdio>
 #include<cstring>

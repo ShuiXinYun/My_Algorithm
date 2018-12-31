@@ -30,7 +30,7 @@ class String
 		String & operator = (char * s);
 };
 
-String & String::operator = (char *s)
+String & String::operator = (char * s)
 {
 	delete [] str;
 	str = new char[strlen(s)+1];
@@ -42,7 +42,7 @@ void test_String()
 {
 	String st1, st2;
 	st1 = "hello world"; //st1.operator = ("hello world")
-	st2 = st1; //此处导致bug, 因为st1和st2均指向同一处, st1和st2生命周期结束后对同一数组delete了两次, 且st2指向的内存空间不会被delete 
+	st2 = st1; //此处导致bug, 因为st1和st2的str均指向同一处, st1和st2生命周期结束后对同一数组delete了两次, 且st2指向的内存空间不会被delete 
 	cout<<st1.c_str()<<endl;
 }
 
