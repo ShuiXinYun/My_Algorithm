@@ -7,6 +7,7 @@ Week8
 */
 
 #include<iostream>
+#include<string> 
 using namespace std;
 
 template<class T, class Pfunc>
@@ -22,6 +23,25 @@ void MyMap(T s, T e, T x, Pfunc func)
 double square(double x)
 {
 	return x*x;
+}
+
+template<class T1, class T2>
+class Pair  //类模板 
+{
+	private:
+		T1 key;
+		T2 value;
+	public:
+		Pair(T1 k, T2 v):key(k), value(v) 
+		{
+		}
+		bool operator < (const Pair<T1, T2> &p) const; 
+};
+
+template<class T1, class T2>
+bool Pair<T1, T2>::operator < (const Pair<T1, T2> &p) const
+{
+	return this->value < p.value;
 }
 
 int main()
@@ -40,6 +60,8 @@ int main()
 		cout<<d[i]<<"  ";
 	}
 	cout<<endl;
+	Pair<string, int> golf("Volkswagen Golf", 2018); //模板类Pair<string, int> 
+	Pair<string, int> civic("Honda Civic", 2016);
+	cout<<(golf<civic)<<endl; //0, false
 	return 0;
 }
-
